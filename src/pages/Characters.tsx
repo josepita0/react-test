@@ -30,6 +30,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "../shared/ui/select";
+import { LoaderCircle, RefreshCw } from "lucide-react";
 // Spinner is handled inside CharactersTable during loading
 
 export default function CharactersPage() {
@@ -87,16 +88,6 @@ export default function CharactersPage() {
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <h1 className="text-xl font-semibold">Personajes</h1>
           <div className="flex w-full flex-wrap gap-2 sm:w-auto sm:flex-nowrap">
-            <Button
-              size="sm"
-              variant="outline"
-              onClick={() => {
-                store.reset();
-                refetch();
-              }}
-            >
-              Rehacer consulta
-            </Button>
             <Dialog open={open} onOpenChange={setOpen}>
               <DialogTrigger asChild>
                 <Button size="sm" className="shrink-0">
@@ -169,6 +160,20 @@ export default function CharactersPage() {
                 </form>
               </DialogContent>
             </Dialog>
+            <Button
+              size="sm"
+              variant="outline"
+              className="group "
+              onClick={() => {
+                store.reset();
+                refetch();
+              }}
+            >
+              <RefreshCw
+                className="group-hover:rotate-180 transition-all duration-300"
+                size={16}
+              />
+            </Button>
             {/* Logout se mantiene en el sidebar */}
           </div>
         </div>

@@ -32,7 +32,7 @@ export default function LoginPage() {
         <CardContent>
           <form className="space-y-5" onSubmit={onSubmit}>
             <div className="space-y-2">
-              <Label htmlFor="email">NOMBRE DE USUARIO O CORREO</Label>
+              <Label htmlFor="email">CORREO</Label>
               <Input
                 id="email"
                 type="email"
