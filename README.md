@@ -1,6 +1,6 @@
 ## React Test — LOTR Personajes
 
-Dashboard en React + TypeScript para gestionar personajes de LOTR (The One API) con arquitectura por dominios (screaming architecture).
+Prueba para gestionar personajes de LOTR (The One API) con arquitectura por dominios (screaming architecture).
 
 ### Stack
 
@@ -13,7 +13,7 @@ Dashboard en React + TypeScript para gestionar personajes de LOTR (The One API) 
 
 ### Funcionalidades
 
-- Login local (email + token) persistido y protección de rutas
+- Login local (email) persistido y protección de rutas
 - Listado de personajes con filtros: Nombre, Raza, Género y Estatus
 - Valores “Todos” en Raza/Género; Estatus por defecto “Activo”
 - Crear y editar personajes locales (overlay) y ocultar/mostrar (Activo/Inactivo)
@@ -36,16 +36,10 @@ src/
 
 ### Variables de entorno
 
-- REACT_APP_ONE_API_TOKEN (opcional; si haces login, el token del login tiene prioridad)
+- REACT_APP_ONE_API_TOKEN
 
 ### Scripts
 
 - pnpm install — instala dependencias
 - pnpm start — arranca en desarrollo
 - pnpm build — build de producción
-
-### Notas
-
-- Se limpió el boilerplate de CRA (tests de ejemplo, web vitals, assets no usados).
-- Los Select de filtros usan Radix con tope de altura en el dropdown.
-- Los datos locales (ocultos/custom/ediciones) se guardan en localStorage.
