@@ -20,6 +20,7 @@ import {
   raceLabel,
   genderLabel,
 } from "../characters/types";
+import JSConfetti from "js-confetti";
 import { useAuthStore } from "../auth/store/auth.store";
 import { DashboardLayout } from "../shared/layout/DashboardLayout";
 import { CharactersTable } from "../characters/components/CharactersTable";
@@ -30,7 +31,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "../shared/ui/select";
-import { LoaderCircle, RefreshCw } from "lucide-react";
+import { RefreshCw } from "lucide-react";
 // Spinner is handled inside CharactersTable during loading
 
 export default function CharactersPage() {
@@ -48,6 +49,9 @@ export default function CharactersPage() {
     "Activo"
   );
 
+  // Instancia js-confetti (solo una vez)
+  const jsConfetti = new JSConfetti();
+
   const onAdd = (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.name) return;
@@ -59,6 +63,7 @@ export default function CharactersPage() {
     setForm({ name: "" });
     setOpen(false);
     refetch();
+    jsConfetti.addConfetti({ emojis: ["🎉", "✨", "🦄", "🥳"] });
   };
 
   const [editId, setEditId] = useState<string | null>(null);
@@ -78,6 +83,7 @@ export default function CharactersPage() {
     setEditId(null);
     setEditForm({});
     refetch();
+    jsConfetti.addConfetti();
   };
 
   // No full-screen blocking states; we show subtle inline feedback below.

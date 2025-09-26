@@ -44,6 +44,9 @@ importers:
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
+      js-confetti:
+        specifier: ^0.13.1
+        version: 0.13.1
       lucide-react:
         specifier: ^0.544.0
         version: 0.544.0(react@18.2.0)
@@ -3859,6 +3862,9 @@ packages:
   jiti@1.21.7:
     resolution: {integrity: sha512-/imKNG4EbWNrVjoNC/1H5/9GFy+tqjGBHCaSsN+P2RnPqjsLmv6UD3Ej+Kj8nBWaRAwyk7kK5ZUc+OEatnTR3A==}
     hasBin: true
+
+  js-confetti@0.13.1:
+    resolution: {integrity: sha512-Kau3apum0zYIvELfZv0lL5VY7dvzpbKi4Oq0XdfjDKdNZc/O+IeGRyLEej7GJ/1APbASvb+ZTWDxmTxxSFkTOg==}
 
   js-tokens@4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
@@ -10756,6 +10762,8 @@ snapshots:
       - utf-8-validate
 
   jiti@1.21.7: {}
+
+  js-confetti@0.13.1: {}
 
   js-tokens@4.0.0: {}
 
